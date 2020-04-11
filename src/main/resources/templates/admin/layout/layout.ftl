@@ -7,7 +7,24 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>${page_title}</title>
-        <link rel="icon" href="https://yiiu.co/favicon.ico">
+<#--        <link rel="icon" href="https://yiiu.co/favicon.ico">-->
+
+
+<#--        <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/font-awesome.min.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/themify-icons.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/metisMenu.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/owl.carousel.min.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/slicknav.min.css">-->
+<#--        <!-- amchart css &ndash;&gt;-->
+<#--        &lt;#&ndash;        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />&ndash;&gt;-->
+<#--        <!-- others css &ndash;&gt;-->
+<#--        <link rel="stylesheet" href="/static/assets/css/typography.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/default-css.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/styles.css">-->
+<#--        <link rel="stylesheet" href="/static/assets/css/responsive.css">-->
+
+
         <#--css-->
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>

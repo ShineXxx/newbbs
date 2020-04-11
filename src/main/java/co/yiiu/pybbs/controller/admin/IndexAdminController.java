@@ -35,8 +35,9 @@ public class IndexAdminController extends BaseAdminController {
     @RequiresAuthentication
     @GetMapping({"/", "/index"})
     public String index(Model model) {
+        return redirect("/admin/topic/list");
         // 查询当天新增话题
-        model.addAttribute("topic_count", topicService.countToday());
+        /*model.addAttribute("topic_count", topicService.countToday());
         // 查询当天新增标签
         model.addAttribute("tag_count", tagService.countToday());
         // 查询当天新增评论
@@ -65,6 +66,7 @@ public class IndexAdminController extends BaseAdminController {
         model.addAttribute("processCpuLoad", processCpuLoad);
 
         return "admin/index";
+//        return "admin/topic/list";*/
     }
 
 }

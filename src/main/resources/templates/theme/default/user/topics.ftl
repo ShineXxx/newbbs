@@ -11,7 +11,8 @@
             <#else>
                 <#include "../components/welcome.ftl"/>
             </#if>
-            <#include "../components/score.ftl"/>
+<#--            <#include "../components/score.ftl"/>-->
+            <#include "../tag/tags.ftl"/>
             <@score limit=10/>
         </div>
     </div>

@@ -24,9 +24,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="telegramName" class="col-sm-2 control-label">Telegram用户名</label>
+<#--                            <label for="telegramName" class="col-sm-2 control-label">Telegram用户名</label>-->
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="telegramName" name="telegramName"
+                                <input type="text" class="form-control" id="telegramName" name="telegramName" hidden="true"
                                        value="${user.telegramName!}"
                                        placeholder="Telegram用户名">
                             </div>
@@ -50,9 +50,9 @@
                             <div class="offset-sm-2 col-sm-10">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" id="emailNotification"
+                                        <input type="checkbox" id="emailNotification" hidden="true"
                                                <#if user.emailNotification>checked</#if>>
-                                        有新消息发送邮件
+<#--                                        有新消息发送邮件-->
                                     </label>
                                 </div>
                                 <#--<div class="checkbox">
@@ -70,38 +70,38 @@
                     </form>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">修改邮箱</div>
-                <div class="card-body">
-                    <form onsubmit="return;" class="form-horizontal">
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-2 control-label">邮箱</label>
-                            <div class="col-sm-10">
-                                <div class="input-group">
-                                    <input type="email" name="email" id="email" class="form-control"
-                                           value="${user.email!}"
-                                           placeholder="邮箱"/>
-                                    <span class="input-group-append">
-                  <button type="button" id="sendEmailCode" class="btn btn-info" autocomplete="off"
-                          data-loading-text="发送中...">发送验证码</button>
-                </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="code" class="col-sm-2 control-label">验证码</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="code" id="code" class="form-control" placeholder="验证码"/>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="offset-sm-2 col-sm-10">
-                                <button type="button" id="settings_email_btn" class="btn btn-info">更改邮箱</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<#--            <div class="card">-->
+<#--                <div class="card-header">修改邮箱</div>-->
+<#--                <div class="card-body">-->
+<#--                    <form onsubmit="return;" class="form-horizontal">-->
+<#--                        <div class="form-group row">-->
+<#--                            <label for="email" class="col-sm-2 control-label">邮箱</label>-->
+<#--                            <div class="col-sm-10">-->
+<#--                                <div class="input-group">-->
+<#--                                    <input type="email" name="email" id="email" class="form-control"-->
+<#--                                           value="${user.email!}"-->
+<#--                                           placeholder="邮箱"/>-->
+<#--                                    <span class="input-group-append">-->
+<#--                  <button type="button" id="sendEmailCode" class="btn btn-info" autocomplete="off"-->
+<#--                          data-loading-text="发送中...">发送验证码</button>-->
+<#--                </span>-->
+<#--                                </div>-->
+<#--                            </div>-->
+<#--                        </div>-->
+<#--                        <div class="form-group row">-->
+<#--                            <label for="code" class="col-sm-2 control-label">验证码</label>-->
+<#--                            <div class="col-sm-10">-->
+<#--                                <input type="text" name="code" id="code" class="form-control" placeholder="验证码"/>-->
+<#--                            </div>-->
+<#--                        </div>-->
+<#--                        <div class="form-group row">-->
+<#--                            <div class="offset-sm-2 col-sm-10">-->
+<#--                                <button type="button" id="settings_email_btn" class="btn btn-info">更改邮箱</button>-->
+<#--                            </div>-->
+<#--                        </div>-->
+<#--                    </form>-->
+<#--                </div>-->
+<#--            </div>-->
             <div class="card">
                 <div class="card-header">修改头像</div>
                 <div class="card-body">
@@ -151,7 +151,8 @@
         </div>
         <div class="col-md-3 hidden-xs">
             <#include "../components/user_info.ftl"/>
-            <#include "../components/token.ftl"/>
+<#--            <#include "../components/token.ftl"/>-->
+            <#include "../tag/tags.ftl"/>
         </div>
     </div>
     <script>

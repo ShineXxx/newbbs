@@ -3,7 +3,20 @@
     <div class="row">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">搜索结果</div>
+                <div class="card-header">
+                    <div class="row align-items-center col-lg-3 clearfix">
+                        <div class="search-box">
+                            <form action="/search">
+                                <input type="search" name="keyword" placeholder="Search..." value="${keyword!}"
+                                       required>
+                                <i class="ti-search"></i>
+                                <#--                                    <button type="submit">-->
+                                <#--                                        <i class="ti-search">${i18n.getMessage("search")}</i>-->
+                                <#--                                    </button>-->
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <@tag_search pageNo=pageNo keyword=keyword>
                     <table class="table">
                         <#list page.records as map>
@@ -24,6 +37,7 @@
             <#else>
                 <#include "components/welcome.ftl"/>
             </#if>
+            <#include "tag/tags.ftl"/>
         </div>
     </div>
 </@html>

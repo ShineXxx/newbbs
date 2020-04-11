@@ -4,23 +4,24 @@
             <ul class="sidebar-menu">
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/img/user2-160x160.jpg"
+<#--                        <img src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/img/user2-160x160.jpg"-->
+                        <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3185001330,134341500&fm=26&gp=0.jpg"
                              class="img-circle"
                              alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p>${i18n.getMessage("welcome")}, ${sec.principal!}</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+<#--                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>-->
                     </div>
                 </div>
-                <li class="header">MAIN NAVIGATION</li>
+                <li class="header">导航栏 </li>
                 <#if sec.hasPermission('index:index')>
-                    <li <#if page_tab=='index'>class="active"</#if>>
-                        <a href="/admin/index">
-                            <i class="fa fa-dashboard"></i>
-                            <span>${i18n.getMessage("admin.dashboard")}</span>
-                        </a>
-                    </li>
+<#--                    <li <#if page_tab=='index'>class="active"</#if>>-->
+<#--                        <a href="/admin/index">-->
+<#--                            <i class="fa fa-dashboard"></i>-->
+<#--                            <span>${i18n.getMessage("admin.dashboard")}</span>-->
+<#--                        </a>-->
+<#--                    </li>-->
                 </#if>
                 <#if sec.hasPermission('topic:list')>
                     <li <#if page_tab=='topic'>class="active"</#if>>

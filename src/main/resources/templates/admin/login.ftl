@@ -34,10 +34,10 @@
         }
     </script>
 </head>
-<body class="hold-transition login-page">
+<body class="login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="javascript:;"><b>ADMIN</b>${site.name}</a>
+        <a href="javascript:;"><b>CMS</b>${site.name}</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">

@@ -87,7 +87,7 @@ public class IndexApiController extends BaseApiController {
         ApiAssert.isNull(user, "用户名已存在");
         User emailUser = userService.selectByEmail(email);
         ApiAssert.isNull(emailUser, "这个邮箱已经被注册过了，请更换一个邮箱");
-        user = userService.addUser(username, password, null, email, null, null, true);
+        user = userService.addUser(username, password, null, email, null, null, false);
         return this.doUserStorage(session, user);
     }
 

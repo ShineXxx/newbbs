@@ -1,7 +1,7 @@
-<#include "../layout/layout.ftl"/>
-<@html page_title="标签" page_tab="tags">
+<#--<#include "../layout/layout.ftl"/>-->
+<#--<@html page_title="标签" page_tab="tags">-->
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
                     <@tag_tags pageNo=pageNo pageSize=40>
@@ -25,12 +25,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 hidden-xs">
-            <#if _user??>
-                <#include "../components/user_info.ftl"/>
-            <#else>
-                <#include "../components/welcome.ftl"/>
-            </#if>
-        </div>
-    </div>
-</@html>
+<#--        <div class="col-md-3 hidden-xs">-->
+<#--            <#if _user??>-->
+<#--                <#include "../components/user_info.ftl"/>-->
+<#--            <#else>-->
+<#--                <#include "../components/welcome.ftl"/>-->
+<#--            </#if>-->
+<#--        </div>-->
+<#--    </div>-->
+<#--</@html>-->

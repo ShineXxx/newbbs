@@ -33,6 +33,7 @@
             <#else>
                 <#include "../components/welcome.ftl"/>
             </#if>
+            <#include "tags.ftl"/>
         </div>
     </div>
 </@html>

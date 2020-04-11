@@ -25,6 +25,12 @@ public class TagsDirective implements TemplateDirectiveModel {
     @Override
     public void execute(Environment environment, Map map, TemplateModel[] templateModels, TemplateDirectiveBody
             templateDirectiveBody) throws TemplateException, IOException {
+        if (map.get("pageNo") == null) {
+            map.put("pageNo",1);
+        }
+        if (map.get("pageSize") == null) {
+            map.put("pageSize",40);
+        }
         Integer pageNo = Integer.parseInt(map.get("pageNo").toString());
         Integer pageSize = Integer.parseInt(map.get("pageSize").toString());
         IPage<Tag> page = tagService.selectAll(pageNo, pageSize, null);
