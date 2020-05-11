@@ -48,7 +48,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/", "file:./static/");
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/", /*"file:./static/"*/"file:D:\\Users\\hh\\git\\github\\pybbs\\static\\");
     }
 
     // 配置网站默认语言

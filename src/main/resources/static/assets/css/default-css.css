@@ -470,3 +470,15 @@ img {
         transform: scale(0);
     }
 }
+
+.avatar {
+    border-radius: 4px;
+    width: 48px;
+    max-width: 48px;
+    vertical-align: middle;
+}
+
+.avatar-lg {
+    width: 64px;
+    max-width: 64px;
+}

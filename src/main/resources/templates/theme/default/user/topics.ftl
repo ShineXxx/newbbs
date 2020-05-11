@@ -13,7 +13,7 @@
             </#if>
 <#--            <#include "../components/score.ftl"/>-->
             <#include "../tag/tags.ftl"/>
-            <@score limit=10/>
+<#--            <@score limit=10/>-->
         </div>
     </div>
 </@html>

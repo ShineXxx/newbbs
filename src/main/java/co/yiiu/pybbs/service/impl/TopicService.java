@@ -116,12 +116,12 @@ public class TopicService implements ITopicService {
                 .toString()));
         userService.update(user);
         if (session != null) session.setAttribute("_user", user);
-        if (!StringUtils.isEmpty(tags)) {
-            // 保存标签
-            List<Tag> tagList = tagService.insertTag(Jsoup.clean(tags, Whitelist.none()));
-            // 处理标签与话题的关联
-            topicTagService.insertTopicTag(topic.getId(), tagList);
-        }
+//        if (!StringUtils.isEmpty(tags)) {
+//            // 保存标签
+//            List<Tag> tagList = tagService.insertTag(Jsoup.clean(tags, Whitelist.none()));
+//            // 处理标签与话题的关联
+//            topicTagService.insertTopicTag(topic.getId(), tagList);
+//        }
         // 索引话题
         indexedService.indexTopic(String.valueOf(topic.getId()), topic.getTitle(), topic.getContent());
         return topic;

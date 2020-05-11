@@ -28,9 +28,9 @@
                                 <#if _user??>
                                     <li class="dropdown">
                                         <i class="fa fa-envelope-o dropdown-toggle"
-                                           data-toggle="dropdown"><span>3</span></i>
+                                           data-toggle="dropdown"><span>1</span></i>
                                         <div class="dropdown-menu notify-box nt-enveloper-box">
-                                            <span class="notify-title">You have 3 new notifications <a
+                                            <span class="notify-title">You have 1 new notifications <a
                                                         href="#">view all</a></span>
                                             <div class="nofity-list">
                                                 <ul class="navbar-nav">
@@ -84,7 +84,7 @@
                         <div class="clearfix d-md-inline-block d-block">
                             <#if _user??>
                                 <div class="user-profile m-0">
-                                    <img class="avatar user-thumb" src="/static/assets/images/author/avatar.png"
+                                    <img class="avatar user-thumb" src="${_user.avatar!}"
                                          alt="avatar">
                                     <h4 class="user-name dropdown-toggle" data-toggle="dropdown">
                                         <#if _user??>${_user.username}<#else>游客</#if>
@@ -98,7 +98,7 @@
                                             <i class="ti-settings"></i> ${i18n.getMessage("setting")}
                                         </a>
                                         <a class="dropdown-item"
-                                           href="javascript:if(confirm('确定要登出吗？登出了就没办法发帖回帖了哦!'))window.location.href='/logout'"
+                                           href="javascript:if(confirm('确定登出？'))window.location.href='/logout'"
                                            class="nav-link">
                                             <i class="fa fa-sign-out"></i> ${i18n.getMessage("logout")}
                                         </a>

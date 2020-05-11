@@ -97,6 +97,7 @@ public class TagService implements ITagService {
                 tagMapper.insert(tag);
             } else {
                 tag.setTopicCount(tag.getTopicCount() + 1);
+                System.out.println(tag.getTopicCount());
                 tagMapper.updateById(tag);
             }
             tagList.add(tag);
