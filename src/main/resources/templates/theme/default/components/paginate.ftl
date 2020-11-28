@@ -18,7 +18,7 @@
             </#if>
 
             <#if (currentPage == 1)>
-                <!--<li>上页</li>-->
+<#--                <li>上页</li>-->
             <#else>
                 <li class="page-item"><a class="page-link" href="${actionUrl}?pageNo=1${urlParas!}">&lt;&lt;</a></li>
                 <li class="page-item"><a class="page-link" href="${actionUrl}?pageNo=#{currentPage - 1}${urlParas!}">&lt;</a>
@@ -34,7 +34,7 @@
             </#list>
 
             <#if (currentPage == totalPage)>
-                <!--<li>下页</li>-->
+<#--                <li>下页</li>-->
             <#else>
                 <li class="page-item"><a class="page-link" href="${actionUrl}?pageNo=#{currentPage + 1}${urlParas!}">&gt;</a>
                 </li>

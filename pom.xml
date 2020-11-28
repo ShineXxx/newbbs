@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>pybbs</name>
-    <description>更实用的Java语言开发的论坛</description>
+    <description></description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

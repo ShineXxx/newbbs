@@ -13,7 +13,7 @@
         <h1>
             系统
             <small>设置</small>
-            <small class="text-danger">是数字的千万不要填成字母，请务必按照格式填写</small>
+<#--            <small class="text-danger">是数字的千万不要填成字母，请务必按照格式填写</small>-->
         </h1>
         <ol class="breadcrumb">
             <li><a href="/admin/index"><i class="fa fa-dashboard"></i> 首页</a></li>

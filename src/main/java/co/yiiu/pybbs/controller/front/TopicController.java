@@ -82,7 +82,7 @@ public class TopicController extends BaseController {
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable Integer id, Model model) {
         Topic topic = topicService.selectById(id);
-        Assert.isTrue(topic.getUserId().equals(getUser().getId()), "谁给你的权限修改别人的话题的？");
+        Assert.isTrue(topic.getUserId().equals(getUser().getId()), "不可以修改别人的话题");
         // 查询话题的标签
         List<Tag> tagList = tagService.selectByTopicId(id);
         // 将标签集合转成逗号隔开的字符串

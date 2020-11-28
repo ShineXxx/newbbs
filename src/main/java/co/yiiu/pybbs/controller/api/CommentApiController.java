@@ -41,7 +41,7 @@ public class CommentApiController extends BaseApiController {
         ApiAssert.notEmpty(content, "请输入评论内容");
         ApiAssert.notNull(topicId, "话题ID呢？");
         Topic topic = topicService.selectById(topicId);
-        ApiAssert.notNull(topic, "你晚了一步，话题可能已经被删除了");
+        ApiAssert.notNull(topic, "话题可能已经被删除");
         // 组装comment对象
         Comment comment = new Comment();
         comment.setCommentId(commentId);
@@ -65,8 +65,8 @@ public class CommentApiController extends BaseApiController {
         ApiAssert.notNull(id, "评论ID呢？");
         ApiAssert.notEmpty(content, "请输入评论内容");
         Comment comment = commentService.selectById(id);
-        ApiAssert.notNull(comment, "这个评论可能已经被删除了，多发点对别人有帮助的评论吧");
-        ApiAssert.isTrue(comment.getUserId().equals(user.getId()), "请给你的权限让你编辑别人的评论？");
+        ApiAssert.notNull(comment, "评论已经删除");
+        ApiAssert.isTrue(comment.getUserId().equals(user.getId()), "无法编辑别人的评论");
         comment.setContent(content);
         commentService.update(comment);
         comment.setContent(SensitiveWordUtil.replaceSensitiveWord(comment.getContent(), "*", SensitiveWordUtil
@@ -79,8 +79,8 @@ public class CommentApiController extends BaseApiController {
     public Result delete(@PathVariable Integer id, HttpSession session) {
         User user = getApiUser();
         Comment comment = commentService.selectById(id);
-        ApiAssert.notNull(comment, "这个评论可能已经被删除了，多发点对别人有帮助的评论吧");
-        ApiAssert.isTrue(comment.getUserId().equals(user.getId()), "请给你的权限让你删除别人的评论？");
+        ApiAssert.notNull(comment, "评论已被删除");
+        ApiAssert.isTrue(comment.getUserId().equals(user.getId()), "不能修改别人评论");
         commentService.delete(comment, session);
         return success();
     }
@@ -90,8 +90,8 @@ public class CommentApiController extends BaseApiController {
     public Result vote(@PathVariable Integer id, HttpSession session) {
         User user = getApiUser();
         Comment comment = commentService.selectById(id);
-        ApiAssert.notNull(comment, "这个评论可能已经被删除了");
-        ApiAssert.notTrue(comment.getUserId().equals(user.getId()), "给自己评论点赞，脸皮真厚！！");
+        ApiAssert.notNull(comment, "该评论已被删除");
+        ApiAssert.notTrue(comment.getUserId().equals(user.getId()), "不能给自己点赞");
         int voteCount = commentService.vote(comment, user, session);
         return success(voteCount);
     }

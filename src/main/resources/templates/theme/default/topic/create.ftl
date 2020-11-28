@@ -14,7 +14,7 @@
                             <label for="content">内容</label>
                             <span class="pull-right">
                             <a href="javascript:uploadFile('topic')">上传图片</a>&nbsp;
-                            <a href="javascript:uploadFile('video')">上传视频</a>
+<#--                            <a href="javascript:uploadFile('video')">上传视频</a>-->
                           </span>
                             <textarea name="content" id="content" class="form-control"
                                       placeholder="内容，支持Markdown语法"></textarea>

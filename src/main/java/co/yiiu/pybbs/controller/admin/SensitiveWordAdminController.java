@@ -3,6 +3,7 @@ package co.yiiu.pybbs.controller.admin;
 import co.yiiu.pybbs.model.SensitiveWord;
 import co.yiiu.pybbs.service.ISensitiveWordService;
 import co.yiiu.pybbs.util.Result;
+import co.yiiu.pybbs.util.SensitiveWordUtil;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -16,6 +17,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by tomoya.
@@ -46,6 +50,7 @@ public class SensitiveWordAdminController extends BaseAdminController {
         SensitiveWord sensitiveWord = new SensitiveWord();
         sensitiveWord.setWord(word);
         sensitiveWordService.save(sensitiveWord);
+        init();
         return success();
     }
 
@@ -54,6 +59,7 @@ public class SensitiveWordAdminController extends BaseAdminController {
     @ResponseBody
     public Result edit(Integer id, String word) {
         sensitiveWordService.updateWordById(id, word);
+        init();
         return success();
     }
 
@@ -62,7 +68,17 @@ public class SensitiveWordAdminController extends BaseAdminController {
     @ResponseBody
     public Result delete(Integer id) {
         sensitiveWordService.deleteById(id);
+        init();
         return success();
+    }
+
+    public void init() {
+        List<SensitiveWord> sensitiveWords = sensitiveWordService.selectAll();
+        Set<String> sensitiveWordSet = new HashSet<>();
+        for (SensitiveWord sensitiveWord : sensitiveWords) {
+            sensitiveWordSet.add(sensitiveWord.getWord());
+        }
+        SensitiveWordUtil.init(sensitiveWordSet);
     }
 
     @RequiresPermissions("sensitive_word:import")
@@ -83,6 +99,7 @@ public class SensitiveWordAdminController extends BaseAdminController {
                     sensitiveWordService.save(sensitiveWord);
                 }
             }
+            init();
             return success();
         } catch (IOException e) {
             //      e.printStackTrace();

@@ -79,8 +79,8 @@
                         添加一条新评论
                         <span class="pull-right">
             <a href="javascript:uploadFile('topic');">上传图片</a>&nbsp;|
-            <a href="javascript:uploadFile('video');">上传视频</a>&nbsp;|
-            <a href="javascript:;" id="goTop">回到顶部</a>
+<#--            <a href="javascript:uploadFile('video');">上传视频</a>&nbsp;|-->
+<#--            <a href="javascript:;" id="goTop">回到顶部</a>-->
           </span>
                     </div>
                     <input type="hidden" name="commentId" id="commentId" value=""/>

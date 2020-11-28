@@ -30,7 +30,7 @@
                         <input type="password" id="password" name="password" value="" class="form-control"
                                placeholder="密码(为空不修改)"/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" hidden>
                         <label>积分</label>
                         <input type="number" pattern="\d" id="score" name="score" value="${user.score!0}"
                                class="form-control"
@@ -41,13 +41,13 @@
                         <input type="email" id="email" name="email" value="${user.email!}" class="form-control"
                                placeholder="邮箱"/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" hidden>
                         <label>githubName</label>
                         <input type="text" id="githubName" name="githubName" value="${user.githubName!}"
                                class="form-control"
                                placeholder="githubName"/>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" hidden>
                         <label>telegramName</label>
                         <input type="text" id="telegramName" name="telegramName" value="${user.telegramName!}"
                                class="form-control"
@@ -90,7 +90,7 @@
                         <textarea name="bio" id="bio" rows="3" class="form-control"
                                   placeholder="个人简介">${user.bio!?html}</textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" hidden>
                         <input type="checkbox" id="emailNotification" name="emailNotification" value="1"
                                <#if user.emailNotification>checked</#if>/>
                         <label for="emailNotification">有新消息接收邮件通知</label>

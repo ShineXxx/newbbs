@@ -133,8 +133,8 @@ public class TopicApiController extends BaseApiController {
     public Result vote(@PathVariable Integer id, HttpSession session) {
         User user = getApiUser();
         Topic topic = topicService.selectById(id);
-        ApiAssert.notNull(topic, "这个话题可能已经被删除了");
-        ApiAssert.notTrue(topic.getUserId().equals(user.getId()), "给自己话题点赞，脸皮真厚！！");
+        ApiAssert.notNull(topic, "话题不见了");
+        ApiAssert.notTrue(topic.getUserId().equals(user.getId()), "不能给自己点赞");
         int voteCount = topicService.vote(topic, getApiUser(), session);
         return success(voteCount);
     }

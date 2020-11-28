@@ -80,33 +80,33 @@
                                     </a>
                                 </li>
                             </#if>
-                            <#if sec.hasPermission('role:list')>
-                                <li <#if page_tab=='auth_role'>class="active"</#if>>
-                                    <a href="/admin/role/list">
-                                        <i class="fa fa-circle-o"></i>
-                                        ${i18n.getMessage("admin.roles")}
-                                    </a>
-                                </li>
-                            </#if>
-                            <#if sec.hasPermission('permission:list')>
-                                <li <#if page_tab=='auth_permission'>class="active"</#if>>
-                                    <a href="/admin/permission/list">
-                                        <i class="fa fa-circle-o"></i>
-                                        ${i18n.getMessage("admin.permissions")}
-                                    </a>
-                                </li>
-                            </#if>
+<#--                            <#if sec.hasPermission('role:list')>-->
+<#--                                <li <#if page_tab=='auth_role'>class="active"</#if>>-->
+<#--                                    <a href="/admin/role/list">-->
+<#--                                        <i class="fa fa-circle-o"></i>-->
+<#--                                        ${i18n.getMessage("admin.roles")}-->
+<#--                                    </a>-->
+<#--                                </li>-->
+<#--                            </#if>-->
+<#--                            <#if sec.hasPermission('permission:list')>-->
+<#--                                <li <#if page_tab=='auth_permission'>class="active"</#if>>-->
+<#--                                    <a href="/admin/permission/list">-->
+<#--                                        <i class="fa fa-circle-o"></i>-->
+<#--                                        ${i18n.getMessage("admin.permissions")}-->
+<#--                                    </a>-->
+<#--                                </li>-->
+<#--                            </#if>-->
                         </ul>
                     </li>
                 </#if>
-                <#if sec.hasPermission('system:edit')>
-                    <li <#if page_tab=='system'>class="active"</#if>>
-                        <a href="/admin/system/edit">
-                            <i class="fa fa-cogs"></i>
-                            <span>${i18n.getMessage("admin.system_config")}</span>
-                        </a>
-                    </li>
-                </#if>
+<#--                <#if sec.hasPermission('system:edit')>-->
+<#--                    <li <#if page_tab=='system'>class="active"</#if>>-->
+<#--                        <a href="/admin/system/edit">-->
+<#--                            <i class="fa fa-cogs"></i>-->
+<#--                            <span>${i18n.getMessage("admin.system_config")}</span>-->
+<#--                        </a>-->
+<#--                    </li>-->
+<#--                </#if>-->
                 <li>
                     <a href="/admin/logout">
                         <i class="fa fa-sign-out"></i>
